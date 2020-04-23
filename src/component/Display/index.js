@@ -18,10 +18,10 @@ export default class Data extends Component {
     }
     render() {
         let showData = this.state.heroes.map(item =>
-            <Col md={6} className="mb-4" key={item._id}>
+            <Col md={12} className="mb-4" key={item._id}>
                 <Card>
                     <Card.Header className="text-center">
-                        <h4>{item.name}</h4>
+                        <h4>{item.name} <small>({item.born} - {item.dead})</small></h4>
                     </Card.Header>
                     <Card.Body>
                         <div>Keterangan: </div>
@@ -30,9 +30,6 @@ export default class Data extends Component {
                         <div>Penetapan: </div>
                         <div>{item.establishment}</div>
                     </Card.Body>
-                    <Card.Footer className="text-center">
-                        {item.born} - {item.dead}
-                    </Card.Footer>
                 </Card>
             </Col>
         )
