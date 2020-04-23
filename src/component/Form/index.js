@@ -15,7 +15,7 @@ const FormHeroes = () => {
             establishment: ''
         },
         onSubmit: (values, action) => {
-            const apiURL = process.env.REACT_APP_APIURL || 'http://localhost:8000'
+            const apiURL = process.env.REACT_APP_APIURL
             axios.post(`${apiURL}/heroes/post`, values);
             action.resetForm();
         }
