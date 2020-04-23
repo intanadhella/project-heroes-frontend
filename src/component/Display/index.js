@@ -18,7 +18,7 @@ export default class Data extends Component {
     }
     render() {
         let showData = this.state.heroes.map(item =>
-            <Col lg={4} md={6} className="mb-4" key={item._id}>
+            <Col md={6} className="mb-4" key={item._id}>
                 <Card>
                     <Card.Header className="text-center">
                         <h4>{item.name}</h4>
